@@ -131,7 +131,7 @@ Generates a matte surface from a given color, modeling an intense light source.
 
 Write your own gradient for a shiny view.
 
-### More
+## More
 
 ### 🚀 Looking for more fun SwiftUI Packages?
 
