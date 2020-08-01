@@ -11,15 +11,8 @@ Draw attention to important interface elements with `.shiny()`. Shiny uses your 
 ## Contents
 
 - [Add the Package](#package)
+- [Basic Usage](#basic-usage)
 - [Examples](#examples)
-- [Usage](#usage)
-- [Gradients](#gradients)
-    - [`.rainbow`](#rainbow)
-    - [`.iridescent`](#iridescent)
-    - [`.matte`](#matte)
-    - [`.glossy`](#glossy)
-    - [`.hyperGlossy`](#hyper-glossy)
-    - [`Custom`](#custom)
 - [More](#more)
 - [Credits](#credits)
 
@@ -37,7 +30,19 @@ Add a dependency in your your `Package.swift`
 .package(url: "https://github.com/maustinstar/shiny.git", from: "0.0.1"),
 ```
 
-## Examples
+## Basic Usage
+
+Just import Shiny and modify your view with `.shiny()` to get started.
+
+```swift
+Import Shiny
+...
+Text("Hello, shiny world! ✨").shiny()
+```
+
+**See the full [Reference Guide](https://github.com/maustinstar/shiny/blob/master/Docs/reference.md).**
+
+## Example
 
 #### Rainbow text on silver card
 
@@ -53,83 +58,7 @@ Text("shiny")
             .shiny(.hyperGlossy(UIColor.systemGray5)))
 ```
 
-#### Glossy text on matte card
-
-<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-black.gif width=250 align="right" />
-
-```swift
-Text("shiny")
-    .font(.largeTitle)
-    .fontWeight(.bold).shiny(.glossy(.black))
-    .background(
-        RoundedRectangle(cornerRadius: 14.0)
-            .frame(width: 200.0, height: 70.0)
-            .shiny(.matte(.black))
-```
-
-#### Iridescent text on glossy card
-
-<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-iridescent.gif width=250 align="right" />
-
-```swift
-Text("shiny")
-    .font(.largeTitle)
-    .fontWeight(.bold).shiny(.iridescent)
-    .background(
-        RoundedRectangle(cornerRadius: 14.0)
-            .frame(width: 200.0, height: 70.0)
-            .shiny(.glossy(.black))
-```
-
-## Usage
-
-Just import Shiny and modify your view with `.shiny()` to get started.
-
-```swift
-Import Shiny
-...
-Text("Hello, shiny world! ✨").shiny()
-```
-
-## Gradients
-
-The `.shiny()` view modifier takes a gradient parameter to define the shiny surface. By default, `.shiny()` uses `Gradient.rainbow`.
-
-### Rainbow
-
-#### 🌈 `.shiny(.rainbow)`
-
-Cycles through the system colors in rainbow order.
-
-### Iridescent
-
-#### 💎 `.shiny(.iridescent)`
-
-Cycles through translucent blues and purples that add an extra sparkle to your views.
-
-### Matte
-
-#### 🟨 `.shiny(.matte(UIColor))`
-
-Generates a matte surface from a given color, modeling a dispersed light source.
-
-### Glossy
-
-#### 🔵 `.shiny(.glossy(UIColor))`
-
-Generates a matte surface from a given color, modeling a focused light source.
-
-### Hyper Glossy
-
-#### 🔦 `.shiny(.hyperGlossy(UIColor))`
-
-Generates a matte surface from a given color, modeling an intense light source.
-
-### Custom
-
-#### ⚙️ `.shiny(Gradient(...))`
-
-Write your own gradient for a shiny view.
+**See more [Examples](https://github.com/maustinstar/shiny/blob/master/Docs/examples.md).**
 
 ## More
 
