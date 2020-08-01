@@ -4,7 +4,7 @@
 
 #### Add motion-based texture to your SwiftUI views
 
-Draw attention to important interface elements with `.shiny()`. Shiny uses your gyroscope to simulate lighting and motion affects on colors. It works on almost every native SwiftUI View. Try it on Text, Toggle, or a VStack. Just add `.shiny()` to get started! 
+Draw attention to important interface elements with `.shiny()`. Shiny uses your gyroscope to simulate lighting and motion effects on colors. It works on almost every native SwiftUI View. Try it on Text, Toggle, or a VStack. Just add `.shiny()` to get started! 
 
 #### 💳 Inspired by the Apple Cash Card
 
