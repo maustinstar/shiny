@@ -12,7 +12,7 @@ Draw attention to important interface elements with `.shiny()`. Shiny uses your 
 
 - [Add the Package](#package)
 - [Basic Usage](#basic-usage)
-- [Examples](#examples)
+- [Example](#example)
 - [More](#more)
 - [Credits](#credits)
 
@@ -35,7 +35,7 @@ Add a dependency in your your `Package.swift`
 Just import Shiny and modify your view with `.shiny()` to get started.
 
 ```swift
-Import Shiny
+import Shiny
 ...
 Text("Hello, shiny world! ✨").shiny()
 ```
