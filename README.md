@@ -1,6 +1,6 @@
 # Shiny
 
-<img src=Images/shiny-rainbow.gif width=250 align="right" />
+<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-rainbow.gif width=250 align="right" />
 
 #### Add motion-based texture to your SwiftUI views
 
@@ -25,6 +25,12 @@ Draw attention to important interface elements with `.shiny()`. Shiny uses your 
 
 ## Package
 
+### For Xcode Projects
+
+File > Swift Packages > Add Package Dependency: https://github.com/maustinstar/shiny
+
+### For Swift Packages
+
 Add a dependency in your your `Package.swift`
 
 ```swift
@@ -35,7 +41,7 @@ Add a dependency in your your `Package.swift`
 
 #### Rainbow text on silver card
 
-<img src=Images/shiny-rainbow.gif width=250 align="right" />
+<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-rainbow.gif width=250 align="right" />
 
 ```swift
 Text("shiny")
@@ -49,7 +55,7 @@ Text("shiny")
 
 #### Glossy text on matte card
 
-<img src=Images/shiny-black.gif width=250 align="right" />
+<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-black.gif width=250 align="right" />
 
 ```swift
 Text("shiny")
@@ -63,7 +69,7 @@ Text("shiny")
 
 #### Iridescent text on glossy card
 
-<img src=Images/shiny-iridescent.gif width=250 align="right" />
+<img src=https://raw.githubusercontent.com/maustinstar/shiny/master/Images/shiny-iridescent.gif width=250 align="right" />
 
 ```swift
 Text("shiny")
@@ -80,6 +86,8 @@ Text("shiny")
 Just import Shiny and modify your view with `.shiny()` to get started.
 
 ```swift
+Import Shiny
+...
 Text("Hello, shiny world! ✨").shiny()
 ```
 
