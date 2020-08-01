@@ -141,6 +141,6 @@ Write your own gradient for a shiny view.
 
 ## Credits
 
-* [**Michael Verges**](https://github.com/maustinstar) - *Initial work* - mverges3@gatech.edu
+* [**Michael Verges**](https://github.com/maustinstar) - *Initial work* - mverges3@gatech.edu - [![Follow on Linkedin](https://img.shields.io/badge/Follow%20on-Linkedin-5176B1.svg)](https://www.linkedin.com/in/michaelverges)
 
 
