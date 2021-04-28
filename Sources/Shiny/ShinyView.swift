@@ -7,6 +7,9 @@
 
 import SwiftUI
 import CoreMotion
+#if os(macOS)
+import AppKit
+#endif
 
 public extension View {
     func shiny(_ surface: Gradient = .rainbow) -> some View {
@@ -31,13 +34,22 @@ internal struct ShinyView<Content>: View where Content: View {
     var content: Content
     
     var position: CGSize {
-        let x = 0 - (CGFloat(model.roll)/CGFloat.pi * 4) * UIScreen.main.bounds.height
-        let y = 0 - (CGFloat(model.pitch)/CGFloat.pi * 4) * UIScreen.main.bounds.height
+        #if os(iOS)
+        let x = 0 - (CGFloat(model.roll) / .pi * 4) * UIScreen.main.bounds.height
+        let y = 0 - (CGFloat(model.pitch) / .pi * 4) * UIScreen.main.bounds.height
+        #elseif os(macOS)
+        let x = 0 - (model.locationX / .pi * 4) * (NSScreen.main?.frame.height ?? 1080)
+        let y = 0 - (model.locationY / .pi * 4) * (NSScreen.main?.frame.height ?? 1080)
+        #endif
         return CGSize(width: x, height: y)
     }
     
     func scale(_ proxy: GeometryProxy) -> CGFloat {
+        #if os(iOS)
         return UIScreen.main.bounds.height / radius(proxy) * 2
+        #elseif os(macOS)
+        return (NSScreen.main?.frame.height ?? 1080) / radius(proxy) * 2
+        #endif
     }
     
     func radius(_ proxy: GeometryProxy) -> CGFloat {
