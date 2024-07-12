@@ -76,6 +76,7 @@ internal struct ShinyView<Content>: View where Content: View {
                         .animation(.default)
                 }
                 .mask(self.content)
+                .allowsHitTesting(false)
             })
     }
 }
